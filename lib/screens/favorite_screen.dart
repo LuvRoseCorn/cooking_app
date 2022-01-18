@@ -26,7 +26,8 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
 
   Widget _buildRecipeList(BuildContext context) {
     return Consumer<FavoriteManagement>(builder: (context, favoriteManagement, child) {
-      recipes = favoriteManagement.findAllRecipes();
+      favoriteManagement.getAllRecipes();
+      recipes = favoriteManagement.currentRecipes;
       if(recipes.isEmpty) {
         return Center(child: Image.asset('assets/illus_pics/no_recipe.png'));
       } else {

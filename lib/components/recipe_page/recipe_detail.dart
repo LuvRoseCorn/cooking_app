@@ -71,7 +71,7 @@ class RecipeDetail extends StatelessWidget {
                             borderRadius: BorderRadius.circular(16.0)),
                       ),
                       onPressed: () {
-                        if(Provider.of<FavoriteManagement>(context, listen: false).findAllRecipes().contains(recipe)){
+                        if(Provider.of<FavoriteManagement>(context, listen: false).currentRecipes.contains(recipe)){
                           //print("da co");
                         }
                         else {
